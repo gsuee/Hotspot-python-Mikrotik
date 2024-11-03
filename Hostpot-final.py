@@ -9,10 +9,10 @@ from concurrent.futures import ThreadPoolExecutor
 logging.basicConfig(level=logging.INFO)
 
 # lista de ip's
-routers = ["10.1.2.4"]
+routers = [""]
 # credenciales
-username = "ventegeo"
-password = "geovente"
+username = ""
+password = ""
 
 def execute_command(client, command):
     stdin, stdout, stderr = client.exec_command(command)
