@@ -2,11 +2,11 @@ import paramiko
 import time
 import re
 
-
-routers = ["10.1.2.4"]
-
-username = "ventegeo"
-password = "geovente"
+# lista de ip's
+routers = ["ip"]
+# credenciales
+username = "user"
+password = "psswd"
 
 
 def execute_command(client, command):
@@ -19,7 +19,7 @@ def read_morosos_ips(filename):
     with open(filename, 'r') as file:
         return [line.strip() for line in file if line.strip()]
 
-
+# lectura del archivo .txt
 morosos_ips = read_morosos_ips('morosos.txt')
 
 for router in routers:
