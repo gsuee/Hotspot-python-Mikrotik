@@ -30,7 +30,7 @@ for router in routers:
             ip_hotspot = re.findall(r'10\.\d{1,3}\.\d{1,3}\.\d{1,3}', hotspot_users_output)
             
             for ip in ip_hotspot:
-                #ARCHIVO .txt
+                
                 if ip in ip_morosos:
                     cmd = f'/ip hotspot user disable [find comment="{ip}"]'
                     print(f"Desactivando {ip}")
