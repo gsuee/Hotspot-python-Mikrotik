@@ -16,7 +16,7 @@ password = ""
 
 def execute_command(client, command):
     stdin, stdout, stderr = client.exec_command(command)
-    stdout.channel.recv_exit_status()  # Espera a que el comando termine
+    stdout.channel.recv_exit_status()  
     return stdout.read().decode('utf-8', errors='replace')
 
 def read_morosos_ips(filename):

@@ -6,10 +6,8 @@ hostname = 'ip'
 username = 'user'
 password = 'psswd'
 
-# Comando MikroTik
-command = '/ip firewall address-list print where list=morosos' # modificar para las versiones
+command = '/ip firewall address-list print where list=morosos' 
 
-# Función para conectar y ejecutar comandos
 def connect_and_execute(hostname, username, password, command):
     client = paramiko.SSHClient()
     client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
@@ -20,7 +18,7 @@ def connect_and_execute(hostname, username, password, command):
     client.close()
     return output
 
-# Obtener la salida del comando
+
 output = connect_and_execute(hostname, username, password, command)
 
 # Extraer las direcciones IP - ajusta la expresión regular si es necesario
